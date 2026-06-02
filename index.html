@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<!-- saved from url=(0094)file:///Users/ali/Documents/Minestarters/VC%20pitch%20deck/svg_interactive_hotspot_map_v6.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Embedded SVG Interactive Map</title>
+
+<style>
+
+body{
+margin:0;
+background:#08161b;
+font-family:Arial,sans-serif;
+padding:20px;
+color:white;
+}
+
+.map-wrap{
+position:relative;
+width:min(1600px,100%);
+margin:auto;
+}
+
+.svg-container img{
+width:100%;
+height:auto;
+display:block;
+border-radius:18px;
+}
+
+.svg-container svg{
+width:100%;
+height:auto;
+display:block;
+border-radius:18px;
+}
+
+.overlay{
+position:absolute;
+inset:0;
+}
+
+.hotspot{
+position:absolute;
+transform:translate(-50%,-50%);
+cursor:default;
+z-index:1;
+}
+
+.hotspot:hover{
+z-index:9999;
+}
+
+.marker{
+width:11px;
+height:11px;
+border-radius:50%;
+background:#ff3030;
+border:1.5px solid white;
+box-shadow:0 0 20px rgba(255,0,0,.45);
+}
+
+.marker:hover{
+transform:scale(1.25);
+}
+
+.label{
+z-index:10000;
+position:absolute;
+top:-18px;
+left:18px;
+background:black;
+color:white;
+padding:5px 8px;
+border-radius:5px;
+font-size:11px;
+font-weight:700;
+white-space:nowrap;
+opacity:0;
+pointer-events:none;
+}
+
+.tooltip{
+z-index:10001;
+position:absolute;
+top:10px;
+left:18px;
+width:260px;
+background:rgba(15,15,15,.96);
+color:white;
+padding:12px;
+border-radius:10px;
+font-size:12px;
+line-height:1.5;
+opacity:0;
+pointer-events:none;
+border:1px solid rgba(255,255,255,.08);
+}
+
+.marker:hover + .label,
+.marker:hover + .label + .tooltip{
+z-index:10001;
+opacity:1;
+}
+
+
+
+
+
+
+
+
+
+
+
+</style>
+</head>
+
+<body>
+
+<div class="map-wrap" id="map">
+
+
+<div class="svg-container">
+<img src="map.svg" alt="Interactive Map">
+</div>
+
+
+<div class="overlay">
+
+<div class="hotspot" style="left: 70.7812%; top: 46.5866%;">
+<div class="marker"></div>
+<div class="label">CHINA</div>
+<div class="tooltip">
+Origin &amp; dominant global processor of nearly all critical minerals
+</div>
+</div>
+
+<div class="hotspot" style="left: 63.9062%; top: 41.4548%;">
+<div class="marker"></div>
+<div class="label">KAZAKHSTAN</div>
+<div class="tooltip">Uranium (#2 world), chromium, copper, zinc, manganese. China controls ~30% of uranium output via JVs</div>
+</div><div class="hotspot" style="left: 71.8438%; top: 42.4972%;">
+<div class="marker"></div>
+<div class="label">MONGOLIA</div>
+<div class="tooltip">Copper, coal, fluorspar. Oyu Tolgoi (Rio Tinto) but China buys ~90% of all exports</div>
+</div><div class="hotspot" style="left: 69.4688%; top: 51.8787%;">
+<div class="marker"></div>
+<div class="label">MYANMAR</div>
+<div class="tooltip">REE (#2 world after China), jade, tin. Chinese companies control most rare earth extraction</div>
+</div><div class="hotspot" style="left: 73.9062%; top: 57.7321%;">
+<div class="marker" style="background: rgb(255, 102, 56); box-shadow: rgb(255, 102, 56) 0px 0px 20px;"></div>
+<div class="label">INDONESIA</div>
+<div class="tooltip">~37% of global nickel supply. Chinese-backed HPAL plants dominate processing<br></div>
+</div><div class="hotspot" style="left: 79.4688%; top: 65.2693%;">
+<div class="marker" style="background: rgb(28, 61, 59); box-shadow: rgb(28, 61, 59) 0px 0px 20px;"></div>
+<div class="label">AUSTRALIA</div>
+<div class="tooltip">Lithium, iron ore, nickel, REE. ~40% of lithium export to China; Tianqi owns Greenbushes stake<br></div>
+</div><div class="hotspot" style="left: 53.6562%; top: 59.2555%;">
+<div class="marker" style="background: rgb(254, 103, 58); box-shadow: rgb(254, 103, 58) 0px 0px 20px;"></div>
+<div class="label">DRC</div>
+<div class="tooltip">~70% of global cobalt production. Chinese firms own 15 of top 19 cobalt mines<br></div>
+</div><div class="hotspot" style="left: 55.0312%; top: 62.5431%;">
+<div class="marker" style="background: rgb(254, 105, 59); box-shadow: rgb(254, 105, 59) 0px 0px 20px;"></div>
+<div class="label">ZAMBIA</div>
+<div class="tooltip">Copper &amp; cobalt. CNMC owns Chambishi mine; major smelter presence<br></div>
+</div><div class="hotspot" style="left: 55.5312%; top: 63.9864%;">
+<div class="marker" style="background: rgb(255, 106, 59); box-shadow: rgb(255, 106, 59) 0px 0px 20px;"></div>
+<div class="label">ZIMBABWE</div>
+<div class="tooltip">Lithium, chrome, platinum. Zhejiang Huayou controls Arcadia lithium mine<br></div>
+</div><div class="hotspot" style="left: 45.7812%; top: 55.6473%;">
+<div class="marker"></div>
+<div class="label">GUINEA</div>
+<div class="tooltip">World's largest bauxite reserves. Chinese-backed SMB-Winning consortium<br></div>
+</div><div class="hotspot" style="left: 31.2812%; top: 60.9394%;">
+<div class="marker" style="background: rgb(222, 35, 46); box-shadow: rgb(222, 35, 46) 0px 0px 20px;"></div>
+<div class="label">PERU</div>
+<div class="tooltip">Copper, lithium, silver. Las Bambas (MMG/Minmetals) — 2% of global copper<br></div>
+</div><div class="hotspot" style="left: 34.0312%; top: 62.944%;">
+<div class="marker" style="background: rgb(223, 35, 44); box-shadow: rgb(223, 35, 44) 0px 0px 20px;"></div>
+<div class="label">BOLIVIA</div>
+<div class="tooltip">World's largest lithium reserves (Salar de Uyuni). CATL-backed COMIBOL deal 2023<br></div>
+</div><div class="hotspot" style="left: 32.7188%; top: 68.7974%;">
+<div class="marker" style="background: rgb(221, 36, 46); box-shadow: rgb(221, 36, 46) 0px 0px 20px;"></div>
+<div class="label">CHILE</div>
+<div class="tooltip">Lithium triangle, copper. SQM stake held by Tianqi Lithium; CODELCO partnerships<br></div>
+</div><div class="hotspot" style="left: 33.9062%; top: 70.7218%;">
+<div class="marker" style="background: rgb(221, 36, 46); box-shadow: rgb(221, 36, 46) 0px 0px 20px;"></div>
+<div class="label">ARGENTINA</div>
+<div class="tooltip">Lithium triangle. Ganfeng Lithium holds major stakes in Cauchari-Olaroz project<br></div>
+</div><div class="hotspot" style="left: 46.4062%; top: 45.9451%;">
+<div class="marker" style="background: rgb(72, 130, 53); box-shadow: rgb(72, 130, 53) 0px 0px 20px;"></div>
+<div class="label">PORTUGAL</div>
+<div class="tooltip">Largest lithium reserves in Europe. EU-backed domestic processing push</div>
+</div><div class="hotspot" style="left: 25.0312%; top: 46.1856%;">
+<div class="marker" style="background: rgb(9, 87, 135); box-shadow: rgb(9, 87, 135) 0px 0px 20px;"></div>
+<div class="label">USA</div>
+<div class="tooltip">Significant domestic REE (MP Materials), lithium, copper — but still import-dependent</div>
+</div><div class="hotspot" style="left: 7.34375%; top: 31.2715%;">
+<div class="marker" style="background: rgb(221, 36, 46); box-shadow: rgb(221, 36, 46) 0px 0px 20px;"></div>
+<div class="label">RUSSIA</div>
+<div class="tooltip">Palladium (#1), nickel, platinum. Post-sanctions increasing Chinese offtake deals</div>
+</div><div class="hotspot" style="left: 13.4062%; top: 33.3563%;">
+<div class="marker" style="background: rgb(17, 86, 134); box-shadow: rgb(17, 86, 134) 0px 0px 20px;"></div>
+<div class="label">USA</div>
+<div class="tooltip">Significant domestic REE (MP Materials), lithium, copper — but still import-dependent</div>
+</div><div class="hotspot" style="left: 22.2812%; top: 38.488%;">
+<div class="marker" style="background: rgb(150, 35, 42); box-shadow: rgb(150, 35, 42) 0px 0px 20px;"></div>
+<div class="label">CANADA</div>
+<div class="tooltip">Lithium, nickel, cobalt, uranium. Western-controlled but Chinese co-investment in some projects</div>
+</div><div class="hotspot" style="left: 67.4062%; top: 34.6392%;">
+<div class="marker"></div>
+<div class="label">RUSSIA</div>
+<div class="tooltip">Palladium (#1), nickel, platinum. Post-sanctions increasing Chinese offtake deals</div>
+</div><div class="hotspot" style="left: 51.7188%; top: 42.4972%;">
+<div class="marker"></div>
+<div class="label">NAMIBIA</div>
+<div class="tooltip">Uranium (#4 world), diamonds, zinc. Growing Chinese investment post-sanctions pivot</div>
+</div><div class="hotspot" style="left: 71.4688%; top: 52.3598%;">
+<div class="marker"></div>
+<div class="label">LAOS</div>
+<div class="tooltip">Rare earths, potash. Chinese companies hold near-total rare earth extraction rights</div>
+</div><div class="hotspot" style="left: 71.4688%; top: 54.1238%;">
+<div class="marker"></div>
+<div class="label">CAMBODIA</div>
+<div class="tooltip">Rare earths, bauxite. Multiple Chinese-controlled rare earth concessions</div>
+</div><div class="hotspot" style="left: 80.8438%; top: 59.5763%;">
+<div class="marker" style="background: rgb(255, 102, 56); box-shadow: rgb(255, 102, 56) 0px 0px 20px;"></div>
+<div class="label">PAPUA NEW GUINEA</div>
+<div class="tooltip">Copper, gold, nickel. Ramu nickel mine — majority Chinese-owned (MCC)</div>
+</div><div class="hotspot" style="left: 75.7188%; top: 54.204%;">
+<div class="marker"></div>
+<div class="label">PHILIPPINES</div>
+<div class="tooltip">Nickel (#2 world). Chinese smelters process bulk of Philippine laterite ore</div>
+</div><div class="hotspot" style="left: 62.2812%; top: 43.7801%;">
+<div class="marker"></div>
+<div class="label">UZBEKISTAN</div>
+<div class="tooltip">Gold (#10 world), copper, uranium. Significant Chinese investment since 2016</div>
+</div><div class="hotspot" style="left: 65.3438%; top: 44.2612%;">
+<div class="marker"></div>
+<div class="label">KYRGYZSTAN</div>
+<div class="tooltip">Gold, antimony, mercury. Chinese companies operate Solton-Sary and other mines</div>
+</div><div class="hotspot" style="left: 64.3438%; top: 45.3838%;">
+<div class="marker"></div>
+<div class="label">TAJIKISTAN</div>
+<div class="tooltip">Silver, gold, antimony, lead. Chinese firms fund major mine developments</div>
+</div><div class="hotspot" style="left: 47.1562%; top: 56.6897%;">
+<div class="marker"></div>
+<div class="label">IVORY COAST</div>
+<div class="tooltip">Manganese, gold, bauxite. Chinese firms hold concessions</div>
+</div><div class="hotspot" style="left: 48.2812%; top: 56.4491%;">
+<div class="marker"></div>
+<div class="label">GHANA</div>
+<div class="tooltip">Gold, bauxite, manganese. Several Chinese-owned gold operations</div>
+</div><div class="hotspot" style="left: 49.9688%; top: 55.5671%;">
+<div class="marker"></div>
+<div class="label">NIGERIA</div>
+<div class="tooltip">Lithium, tin, columbite (niobium). Chinese firms hold multiple mining licences</div>
+</div><div class="hotspot" style="left: 50.9687%; top: 58.8546%;">
+<div class="marker"></div>
+<div class="label">GABON</div>
+<div class="tooltip">Manganese (#3 world). COMILOG partially Chinese-backed supply chain</div>
+</div><div class="hotspot" style="left: 56.6562%; top: 60.0574%;">
+<div class="marker"></div>
+<div class="label">KENYA</div>
+<div class="tooltip">Niobium, REE. Chinese investment in Mrima Hill project</div>
+</div><div class="hotspot" style="left: 57.0938%; top: 58.133%;">
+<div class="marker"></div>
+<div class="label">TANZANIA</div>
+<div class="tooltip">Graphite, gold, nickel. Chinese investment in Lindi Jumbo graphite project</div>
+</div><div class="hotspot" style="left: 52.6562%; top: 64.6278%;">
+<div class="marker"></div>
+<div class="label">NAMIBIA</div>
+<div class="tooltip">Uranium (#4 world), diamonds, zinc. Growing Chinese investment post-sanctions pivot</div>
+</div><div class="hotspot" style="left: 53.9062%; top: 67.9154%;">
+<div class="marker"></div>
+<div class="label">SOUTH AFRICA</div>
+<div class="tooltip">Chrome, PGMs, manganese. Sinosteel, Jinchuan — major stakes</div>
+</div><div class="hotspot" style="left: 55.2188%; top: 67.1937%;">
+<div class="marker"></div>
+<div class="label">LESOTHO</div>
+<div class="tooltip">Diamonds. Chinese-backed mining operations</div>
+</div><div class="hotspot" style="left: 59.2188%; top: 64.3071%;">
+<div class="marker"></div>
+<div class="label">MADAGASCAR</div>
+<div class="tooltip">Cobalt, nickel, graphite, ilmenite. Ambatovy nickel project partially Chinese-financed</div>
+</div><div class="hotspot" style="left: 31.5938%; top: 57.0906%;">
+<div class="marker"></div>
+<div class="label">COLOMBIA</div>
+<div class="tooltip">Nickel, coal, gold. Growing Chinese investment in Cerro Matoso and emerald mining</div>
+</div><div class="hotspot" style="left: 30.2812%; top: 58.7744%;">
+<div class="marker"></div>
+<div class="label">ECUADOR</div>
+<div class="tooltip">Copper, gold. Mirador mine — majority owned by CRCC-Tongguan</div>
+</div><div class="hotspot" style="left: 50%; top: 50%;">
+<div class="marker"></div>
+<div class="label">NEW LOCATION</div>
+<div class="tooltip">
+Add description here
+</div>
+</div><div class="hotspot" style="left: 55.4062%; top: 59.015%;">
+<div class="marker"></div>
+<div class="label">RWANDA</div>
+<div class="tooltip">Coltan (tantalum/niobium), tin, tungsten. Chinese buyers dominate offtake</div>
+</div><div class="hotspot" style="left: 55.9062%; top: 57.6519%;">
+<div class="marker"></div>
+<div class="label">UGANDA</div>
+<div class="tooltip">Cobalt, gold. China controls Kilembe copper-cobalt mines</div>
+</div></div>
+
+</div>
+
+<script>
+// Finalized non-editable interactive map
+</script>
+
+</body>
+</html>
